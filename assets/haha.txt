@@ -1,0 +1,191 @@
+/* =====================================================
+   DEEP UI ANALYSIS – GROCERY / FOOD WEBSITE
+   ===================================================== */
+
+/* ======================
+   1. WEBSITE TYPE
+   ====================== */
+SITE_TYPE = "Organic Grocery / Food Ecommerce / Restaurant Landing"
+FOCUS     = ["Fresh Food", "Healthy Lifestyle", "Online Shopping"]
+LAYOUT    = "Modern, Card-Based, CTA Driven"
+
+/* ======================
+   2. EXTRACTED TEXT
+   ====================== */
+
+/* ----- HEADER ----- */
+LOGO = "Botanica"
+
+NAV_MENU = [
+  "Home",
+  "Shop",
+  "Products",
+  "Pages",
+  "Blog",
+]
+
+HEADER_ICONS = [
+  "Search",
+  "Contact"
+  "Wishlist",
+  "Cart"
+]
+
+/* ----- HERO SECTION ----- */
+HERO = {
+  TITLE: "Delicious Salad Everyday",
+  DESCRIPTION: "Fresh and healthy salad made with our own Chif Recipy. Special healthy and fat free dish for those who want to lose weight.",
+  BUTTONS: ["Shop Now", "Learn More"]
+}
+
+/* ----- CATEGORY MENU ----- */
+OUR_MENU = [
+  "Fresh Fruits",
+  "Vegetables",
+  "Organic Food",
+  "Burger",
+  "Meat",
+  "Juice"
+]
+
+/* ----- SERVICE GUARANTEE ----- */
+WE_GUARANTEE = [
+  "100% Fresh Products",
+  "Fast Delivery",
+  "Secure Payment"
+]
+
+CTA_TEXT = "Choose what you want and get it delivered"
+
+/* ----- PROMOTIONAL BANNERS ----- */
+PROMOS = [
+  "Burger",
+  "Premium Quality Fillet Mignon",
+  "Super Delicious Burger"
+]
+
+/* ----- BEST SELLING ----- */
+BEST_SELLING_PRODUCTS = [
+  "Broccoli",
+  "Red Onion",
+  "Green Pepper",
+  "Lettuce",
+  "Sweet Corn",
+  "Asparagus",
+  "Green Beans",
+  "Cherry Tomato"
+]
+
+/* ----- SPECIAL OFFER ----- */
+SPECIAL_OFFER = {
+  TITLE: "Special Offer",
+  TEXT: "Burgers with extra deal price",
+  PRICE: "$12.99"
+}
+
+/* ----- TESTIMONIAL ----- */
+TESTIMONIAL = {
+  TITLE: "Trusted",
+  SUBTITLE: "Customer Says About Us",
+  RATING: "★★★★★"
+}
+
+/* ----- FEATURED PRODUCTS ----- */
+FEATURED_PRODUCTS = [
+  "Kiwi",
+  "Peach",
+  "Orange",
+  "Blueberry"
+  
+]
+
+/* ----- AVAILABILITY ----- */
+AVAILABILITY_TEXT = "Available"
+PRODUCT_TYPE = "Organic Product Packs"
+
+/* ----- BLOG  NEWS ----- */
+LATEST_NEWS = [
+  "Healthy Food & Vegetable Salad",
+  "How to cook burger properly",
+  "Fresh vegetables tips"
+]
+
+/* ----- FOOTER ----- */
+FOOTER = [
+  "Brand Logo",
+  "About Company",
+  "Contact Information",
+  "Social Media Icons",
+  "Copyright"
+]
+
+/* ======================
+   3. COLOR THEME
+   ====================== */
+COLORS = {
+  PRIMARY: "#0B5D3B",      // Dark Green (trust, organic)
+  SECONDARY: "#8BC34A",    // Light Green (freshness)
+  BACKGROUND: "#FFFFFF",  // White
+  HIGHLIGHT: "#F4D06F",    // Soft Yellow
+  MUTED: "#F5F5F5",        // Light Gray
+  ACCENT_ORANGE: "#FFA500",
+  ACCENT_RED: "#E53935"
+}
+
+/* ======================
+   4. FONT STYLE
+   ====================== */
+FONT = {
+  FAMILY: "Sans-Serif (Poppins / Inter style)",
+  HEADING: {
+    WEIGHT: "700",
+    SIZE: "Large",
+    STYLE: "Bold"
+  },
+  BODY: {
+    WEIGHT: "400",
+    SIZE: "Normal",
+    LINE_HEIGHT: "Relaxed"
+  },
+  BUTTON: {
+    WEIGHT: "600",
+    SHAPE: "Rounded"
+  }
+}
+
+/* ======================
+   5. UI / UX PATTERN
+   ====================== */
+UI_UX = [
+  "Card Based Product Grid",
+  "Rounded Corners",
+  "Soft Shadows",
+  "Clear CTA Buttons",
+  "Food-Focused Imagery",
+  "Mobile Friendly Layout"
+]
+
+/* ======================
+   6. DESIGN PSYCHOLOGY
+   ====================== */
+PSYCHOLOGY = {
+  GREEN: "Health, Freshness, Trust",
+  WHITE: "Clean, Simple",
+  YELLOW: "Attention, Offers",
+  RED: "Food Appetite, Promotions"
+}
+
+/* ======================
+   7. TARGET AUDIENCE
+   ====================== */
+AUDIENCE = [
+  "Online Grocery Buyers",
+  "Health Conscious People",
+  "Organic Food Lovers",
+  "Restaurant Customers"
+]
+
+/* ======================
+   8. SUMMARY
+   ====================== */
+SUMMARY = "This UI is optimized for trust, freshness, easy shopping, and strong visual appeal."

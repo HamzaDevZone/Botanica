@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Botanica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="output.css" />
+  <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+  <!-- Demo styles -->
+</style>
+</head>
+
+<body>
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
+    <nav class="z-50 flex justify-between items-center bg-black text-white px-4 py-3 fixed top-0 left-1/2 -translate-x-1/2 rounded-b-2xl w-11/12 md:w-10/12 shadow-lg">
+
+      <!-- Logo -->
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold">Botanica</h1>
+      </div>
+
+      <!-- Menu (Desktop only) -->
+      <div class="hidden md:flex w-6/12 justify-between text-sm">
+        <a href="./index.html" class="hover:text-green-500 transition">Home</a>
+        <a href="./shope.html" class="hover:text-green-500 transition">Shop</a>
+        <a href="./product.html" class="hover:text-green-500 transition">Product</a>
+        <a href="./Pages.html" class="hover:text-green-500 transition">Pages</a>
+        <a href="./blog.html" class="hover:text-green-500 transition">Blog</a>
+      </div>
+
+      <!-- Right Buttons -->
+      <div class="flex items-center justify-end gap-4 w-6/12 md:w-2/12">
+
+        <!-- Search (Desktop only) -->
+        <button class="hidden md:flex items-center text-sm gap-1 hover:text-green-500 transition">
+          <i class="fa-thin fa-magnifying-glass"></i> Search
+        </button>
+
+        <!-- Icons -->
+        <button class="hover:text-green-500 transition"><i class="fa-solid fa-heart text-lg"></i></button>
+        <button class="hover:text-green-500 transition"><i class="fa-solid fa-basket-shopping-minus text-lg"></i></button>
+        <button class="hover:text-green-500 transition"><i class="fa-thin fa-user text-lg"></i></button>
+
+        <!-- Mobile menu toggle -->
+        <button class="md:hidden ml-2" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+
+      </div>
+
+    </nav>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobileMenu" class="fixed top-16 left-1/2 -translate-x-1/2 w-11/12 bg-black text-white rounded-b-2xl shadow-lg md:hidden hidden flex-col py-4 space-y-2 z-40">
+      <a href="./index.html" class="block px-4 py-2 hover:bg-green-900 rounded transition">Home</a>
+      <a href="./shope.html" class="block px-4 py-2 hover:bg-green-900 rounded transition">Shop</a>
+      <a href="./product.html" class="block px-4 py-2 hover:bg-green-900 rounded transition">Product</a>
+      <a href="./Pages.html" class="block px-4 py-2 hover:bg-green-900 rounded transition">Pages</a>
+      <a href="./blog.html" class="block px-4 py-2 hover:bg-green-900 rounded transition">Blog</a>
+    </div>
+
+    <main>
+      <!-- Swiper -->
+      <div class="swiper mySwiper w-full">
+        <div class="swiper-wrapper">
+
+          <!-- Slide -->
+          <div class="swiper-slide">
+            <div class="min-h-screen w-full bg-cover bg-center bg-[url('/assets/Salads-Vegetables-Olive-Cheese-Plate.jpg')] px-4 text-white flex flex-col md:flex-row justify-start md:items-center">
+              
+              <!-- Text Content -->
+              <div class="text-yellow-300 w-full md:w-2/5 mt-20 md:mt-32 flex flex-col gap-4">
+                <span class="text-3xl md:text-6xl font-bold">Delicious <br>Salad Everyday</span>
+                <p class="md:text-lg">
+                  Fresh and healthy salad made with our own Chef Recipe. Special healthy and fat free dish for those who want to lose weight.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 md:gap-6 mt-4">
+                  
+                  <!-- Explore Now -->
+                  <button class="bg-green-800 text-white rounded-3xl flex items-center justify-center gap-3 px-6 py-2.5 w-8/12 sm:w-6/12 md:w-5/12 hover:bg-green-700 transition">
+                    <span>Explore Now</span>
+                    <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center">
+                      <i class="fa-regular fa-arrow-right text-green-800"></i>
+                    </div>
+                  </button>
+
+                  <!-- How to Order -->
+                  <button class="text-black rounded-3xl flex items-center justify-center gap-3 px-4 py-2.5 w-8/12 sm:w-6/12 md:w-5/12 hover:bg-gray-200 transition">
+                    <div class="relative w-9 h-9 rounded-full flex items-center justify-center">
+                      <!-- Right half border -->
+                      <div class="absolute inset-0 rounded-full border-4 border-white blur-sm opacity-60 [clip-path:inset(0_0_0_50%)]"></div>
+                      <!-- Left half border -->
+                      <div class="absolute inset-0 rounded-full border-4 border-green-500 [clip-path:inset(0_50%_0_0)]"></div>
+                      <!-- Center play -->
+                      <div class="relative z-10 bg-white rounded-full w-7 h-7 flex items-center justify-center">
+                        <i class="fa-solid fa-play text-black"></i>
+                      </div>
+                    </div>
+                    <span>How to Order</span>
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+
+
+    <section id="category-menu"
+      class="w-full bg-primary lg:bg-black py-10 md:py-16 px-4 md:px-10 flex flex-col md:flex-row items-center gap-8"
+    >
+      <!-- Left Content -->
+      <div class="flex flex-col items-center md:items-start md:w-2/12 text-center md:text-left">
+        <span class="text-lg md:text-xl text-white italic">
+          Today Menu
+        </span>
+
+        <h4 class="text-2xl md:text-3xl mt-2 md:mt-3 mb-6 md:mb-10 text-white">
+          Our Menu
+        </h4>
+
+        <!-- Navigation (hidden on small screens) -->
+        <div class="hidden md:flex gap-4">
+          <button
+            id="menuPrev"
+            class="bg-white text-green-800 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-left text-xl"></i>
+          </button>
+
+          <button
+            id="menuNext"
+            class="bg-white text-green-800 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-right text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper menuSwiper w-full md:w-10/12">
+        <div class="swiper-wrapper">
+
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col justify-center items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide flex flex-col items-center text-center bg-amber-50 rounded-full px-4 py-6 md:py-10">
+            <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-400 flex items-center justify-center">
+              1
+            </div>
+
+            <span class="mt-3 md:mt-4 font-semibold text-sm md:text-base">
+              Product Name
+            </span>
+
+            <p class="mt-2 md:mt-4 text-xs md:text-sm leading-relaxed px-2">
+              Ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+
+          <!-- Duplicate slides as needed -->
+          <!-- Just copy the block above -->
+
+        </div>
+      </div>
+    </section>
+
+    <section id="service-guarantee"
+      class="grid grid-cols-1 lg:grid-cols-3 gap-8 py-10 px-4 md:px-10"
+    >
+      <!-- Left Content -->
+      <div class="flex flex-col">
+        <span class="text-sm uppercase tracking-wide text-gray-600">
+          We Guarantee
+        </span>
+
+        <span class="text-2xl font-bold mt-1">
+          30 Minutes Delivery!
+        </span>
+
+        <p class="my-6 text-sm md:text-base text-gray-700 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum repudiandae
+          molestias beatae dolorum optio voluptate modi, voluptatem unde nulla
+          voluptatibus!
+        </p>
+
+        <div class="flex items-center gap-4 mt-2">
+          <div class="w-10 h-10 bg-amber-500 flex items-center justify-center rounded-full">
+            img
+          </div>
+
+          <div>
+            <span class="text-sm text-gray-600">Call us free:</span>
+            <h2 class="text-lg font-semibold">+1 234-567-890</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Image / Visual -->
+      <div class="flex justify-center items-center">
+        <div class="w-full max-w-xs md:max-w-sm h-56 bg-amber-600 rounded-xl flex items-center justify-center">
+          2
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="flex flex-col items-start lg:items-end text-left lg:text-right">
+        <span class="text-lg font-semibold">
+          Choose what you want, select a pick up time
+        </span>
+
+        <p class="my-6 text-sm md:text-base text-gray-700 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet provident
+          natus nemo aliquam incidunt.
+        </p>
+
+        <button
+          class="bg-green-800 text-white rounded-full flex items-center justify-between gap-3 px-5 py-3 w-fit"
+        >
+          <span>Explore Now</span>
+          <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center">
+            <i class="fa-regular fa-arrow-right text-green-800"></i>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section id="promotional-banners"
+      class="grid grid-cols-1 lg:grid-cols-12 gap-4 py-10 px-4 md:px-10"
+    >
+      <!-- Burger -->
+      <div
+        class="lg:col-span-3 rounded-2xl bg-amber-400 flex items-center justify-center text-2xl md:text-4xl font-semibold min-h-[180px]"
+      >
+        Burger
+      </div>
+
+      <!-- Main Promo -->
+      <div
+        class="lg:col-span-6 lg:row-span-2 rounded-2xl bg-pink-900 p-6 md:p-10 flex items-center"
+      >
+        <div>
+          <span class="text-lg md:text-3xl text-white italic">
+            Today Menu
+          </span>
+
+          <h4 class="text-3xl md:text-6xl mt-3 mb-6 md:mb-10 text-white font-bold">
+            Our Menu
+          </h4>
+
+          <button
+            class="bg-green-800 text-white rounded-full flex items-center gap-4 px-5 py-3 w-fit"
+          >
+            <span>Explore Now</span>
+            <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center">
+              <i class="fa-regular fa-arrow-right text-green-800"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Shawarma -->
+      <div
+        class="lg:col-span-3 lg:row-span-2 rounded-2xl bg-gray-700 flex items-center justify-center text-2xl md:text-4xl text-white font-semibold min-h-[180px]"
+      >
+        Shawarma
+      </div>
+
+      <!-- Pizza -->
+      <div
+        class="lg:col-span-3 rounded-2xl bg-red-200 flex items-center justify-center text-2xl md:text-4xl font-semibold min-h-[180px]"
+      >
+        Pizza
+      </div>
+    </section>
+
+    <section id="best-selling" class="px-4 md:px-8 py-10">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+        <div class="flex items-center gap-2">
+          <span class="text-xl font-bold">Best Selling</span>
+          <span class="text-gray-400">or</span>
+          <div class="sort"></div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center gap-4">
+          <button
+            id="bestSellingPrev"
+            class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-left text-2xl"></i>
+          </button>
+          <button
+            id="bestSellingNext"
+            class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-right text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper lolSwiper w-full">
+        <div class="swiper-wrapper">
+
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div class="swiper-slide p-3">
+            <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+              
+              <!-- Top: Sold Out + Heart -->
+              <div class="flex justify-between items-center">
+                <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                  Sold Out
+                </span>
+                <button>
+                  <i class="fa-solid fa-heart text-lg text-white"></i>
+                </button>
+              </div>
+
+              <!-- Product Image -->
+              <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                Product Image
+              </div>
+
+              <!-- Info: Rating, Name, Price -->
+              <div>
+                <!-- Rating -->
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                  <i class="fa-thin fa-star text-yellow-400"></i>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                <!-- Price & Cart -->
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-green-900 font-semibold">$8.00</span>
+                    <span class="line-through text-red-500 ml-1">$9.00</span>
+                  </div>
+
+                  <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Duplicate Product Slides as needed -->
+
+        </div>
+      </div>
+    </section>
+
+    <section id="SPECIAL OFFER" class="relative min-h-screen flex items-center">
+
+      <!-- SVG (UNCHANGED) -->
+      <svg class="clip-custom absolute inset-0 w-full h-full px-8 py-10"> 
+        <defs>
+          <clipPath id="clipShapeLeft" clipPathUnits="objectBoundingBox">
+            <path d="
+              M 0.45 0 
+              L 1 0 
+              L 1 1
+              L 0.7 1
+              A 0.14 0.14 0 0 1 0.6 0.9
+              L 0.4 0.15
+              A 0.14 0.14 0 0 1 0.45 0
+              Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <!-- Background -->
+      <div class="clip-custom-left absolute inset-0 bg-yellow-400 px-8 py-10"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 w-full flex flex-col lg:flex-row items-center gap-10 px-6 py-12">
+
+        <!-- Text -->
+        <div class="w-full lg:w-1/2">
+          <span class="text-2xl text-green-800"><i>Special Offer</i></span>
+
+          <h2 class="text-xl sm:text-2xl my-6 font-bold">
+            Burger With Onion Dip and Potato Chips
+          </h2>
+
+          <p class="max-w-xl">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad minima praesentium dolorum eos deleniti optio.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 my-10">
+            <button class="bg-green-800 text-white rounded-3xl flex items-center gap-4 px-6 py-2.5">
+              <span>Explore Now</span>
+              <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center">
+                <i class="fa-regular fa-arrow-right text-green-800"></i>
+              </div>
+            </button>
+
+            <div class="flex items-center">
+              <span class="text-3xl text-yellow-300 font-bold">$12.00</span>
+              <span class="text-green-800 text-sm ml-4 line-through">$25.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="bg-gray-700 w-full lg:w-1/2 h-64 sm:h-80 lg:h-[28rem] rounded-2xl"></div>
+
+      </div>
+    </section>
+
+    <section id="TESTIMONIAL" class="relative min-h-screen flex items-center">
+
+      <!-- SVG (UNCHANGED PATH) -->
+      <svg class="clip-custom absolute inset-0 w-full h-full px-8 py-10">
+        <defs>
+          <clipPath id="clipShapeRight" clipPathUnits="objectBoundingBox">
+            <path d="
+              M 0.55 0
+              L 0 0
+              L 0 1
+              L 0.3 1
+              A 0.14 0.14 0 0 0 0.4 0.9
+              L 0.6 0.15
+              A 0.14 0.14 0 0 0 0.55 0
+              Z
+            " />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <!-- Background shape -->
+      <div class="clip-custom-right absolute inset-0 bg-green-400 px-8 py-10"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 w-full flex flex-col lg:flex-row items-center px-6 py-12 gap-10">
+
+        <!-- Image / Left block -->
+        <div class="bg-gray-700 w-full lg:w-1/2 h-64 sm:h-80 lg:h-[28rem] rounded-2xl"></div>
+
+        <!-- Swiper -->
+        <div class="swiper customerSwiper w-full lg:w-1/2">
+          <div class="swiper-wrapper">
+
+            <!-- Slide -->
+            <div class="swiper-slide">
+              <div class="flex flex-col items-center text-center px-4">
+                <span class="text-2xl text-green-800"><i>Special Offer</i></span>
+
+                <h2 class="text-xl sm:text-2xl my-4 font-bold">
+                  Burger With Onion Dip and Potato Chips
+                </h2>
+
+                <p class="max-w-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad minima praesentium dolorum eos deleniti optio.
+                </p>
+
+                <div class="my-4">
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                </div>
+
+                <div>
+                  <span class="font-bold">Customer</span> – <span>John Doe</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col items-center text-center px-4">
+                <span class="text-2xl text-green-800"><i>Special Offer</i></span>
+
+                <h2 class="text-xl sm:text-2xl my-4 font-bold">
+                  Burger With Onion Dip and Potato Chips
+                </h2>
+
+                <p class="max-w-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad minima praesentium dolorum eos deleniti optio.
+                </p>
+
+                <div class="my-4">
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                  <i class="fa-solid fa-star text-green-400"></i>
+                </div>
+
+                <div>
+                  <span class="font-bold">Customer</span> – <span>John Doe</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="featured-products" class="px-4 md:px-8 py-10">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+          <span class="text-xl font-bold">Featured Products</span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center gap-4">
+          <button
+            id="featuredProductPrev"
+            class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-left text-2xl"></i>
+          </button>
+          <button
+            id="featuredProductNext"
+            class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            <i class="fa-thin fa-angle-right text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+        <!-- Swiper -->
+        <div class="swiper featuredProductSwiper w-full">
+          <div class="swiper-wrapper">
+
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Product Card -->
+            <div class="swiper-slide p-3">
+              <div class="bg-gray-200 rounded-2xl p-4 flex flex-col gap-3 h-full">
+                
+                <!-- Top: Sold Out + Heart -->
+                <div class="flex justify-between items-center">
+                  <span class="px-3 py-1 bg-fuchsia-600 text-xs text-white rounded-full">
+                    Sold Out
+                  </span>
+                  <button>
+                    <i class="fa-solid fa-heart text-lg text-white"></i>
+                  </button>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-36 bg-amber-400 rounded-xl flex items-center justify-center">
+                  Product Image
+                </div>
+
+                <!-- Info: Rating, Name, Price -->
+                <div>
+                  <!-- Rating -->
+                  <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                    <i class="fa-thin fa-star text-yellow-400"></i>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="mt-2 mb-3 font-semibold">Product Name</h3>
+
+                  <!-- Price & Cart -->
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-green-900 font-semibold">$8.00</span>
+                      <span class="line-through text-red-500 ml-1">$9.00</span>
+                    </div>
+
+                    <button class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                      <i class="fa-solid fa-basket-shopping-minus text-black"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Duplicate slides as needed -->
+
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination bg-primary mt-85 rounded-full"></div>
+        </div>
+    </section>
+
+    <section id="availability" class="w-full py-10 px-4 md:px-10 flex flex-col items-center gap-10">
+
+      <!-- Top Card -->
+      <div class="bg-gray-800 w-full md:w-11/12 rounded-3xl flex flex-col lg:flex-row justify-between items-center px-6 md:px-10 py-8 gap-6 md:gap-10">
+        
+        <!-- Left Placeholder / Image -->
+        <div class="w-full lg:w-1/2 h-40 md:h-60 bg-yellow-400 rounded-2xl"></div>
+        
+        <!-- Right Content -->
+        <div class="flex flex-col justify-center items-center text-center lg:text-left lg:items-start gap-4 lg:gap-6">
+          <span class="text-green-800 text-xl md:text-2xl italic">Available</span>
+          <p class="text-sm md:text-base">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, magnam! Autem totam dolorem fugit! Beatae, cumque!
+          </p>
+          <button class="bg-green-900 text-white rounded-3xl flex items-center justify-center gap-3 px-6 py-2.5 w-full sm:w-auto md:w-48 mt-2 md:mt-4">
+            <span>Learn More</span>
+            <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center">
+              <i class="fa-regular fa-arrow-right text-green-800"></i>
+            </div>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Grid Features -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-11/12">
+        
+        <!-- Feature Item -->
+        <div class="bg-amber-400 rounded-2xl flex flex-col sm:flex-row justify-start items-center p-4 gap-4">
+          <div class="w-10 h-10 bg-green-800 flex items-center justify-center rounded-full">
+            <i id="icon"></i>
+          </div>
+          <div>
+            <span class="font-bold">Free Delivery</span>
+            <p class="text-sm">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="bg-amber-400 rounded-2xl flex flex-col sm:flex-row justify-start items-center p-4 gap-4">
+          <div class="w-10 h-10 bg-green-800 flex items-center justify-center rounded-full">
+            <i id="icon"></i>
+          </div>
+          <div>
+            <span class="font-bold">Always Fresh</span>
+            <p class="text-sm">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="bg-amber-400 rounded-2xl flex flex-col sm:flex-row justify-start items-center p-4 gap-4">
+          <div class="w-10 h-10 bg-green-800 flex items-center justify-center rounded-full">
+            <i id="icon"></i>
+          </div>
+          <div>
+            <span class="font-bold">Premium Quality</span>
+            <p class="text-sm">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="blog-news" class="bg-green-800 w-full px-4 sm:px-6 md:px-8 py-10">
+
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">Blog & News</span>
+
+        <div class="flex items-center">
+          <button
+            class="bg-gray-200 rounded-full w-10 h-10 mr-3"
+            id="blogNewsPrev">
+            <i class="fa-thin fa-angle-left text-2xl"></i>
+          </button>
+          <button
+            class="bg-gray-200 rounded-full w-10 h-10"
+            id="blogNewsNext">
+            <i class="fa-thin fa-angle-right text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper blogNewsSwiper w-full">
+        <div class="swiper-wrapper">
+
+          <!-- Slide -->
+          <div class="swiper-slide bg-gray-200 rounded-2xl p-4 flex flex-col gap-3">
+
+            <div class="w-full h-40 sm:h-48 bg-amber-400 flex justify-center items-center rounded-xl">
+              Product img
+            </div>
+
+            <div class="flex justify-between items-center text-sm text-gray-600">
+              <span>By Admin</span>
+              <span>22 Aug 2024</span>
+              <button>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-2">Product Name</h4>
+              <a href="#" class="text-green-800 font-medium">
+                Read More →
+              </a>
+            </div>
+
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide bg-gray-200 rounded-2xl p-4 flex flex-col gap-3">
+
+            <div class="w-full h-40 sm:h-48 bg-amber-400 flex justify-center items-center rounded-xl">
+              Product img
+            </div>
+
+            <div class="flex justify-between items-center text-sm text-gray-600">
+              <span>By Admin</span>
+              <span>22 Aug 2024</span>
+              <button>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-2">Product Name</h4>
+              <a href="#" class="text-green-800 font-medium">
+                Read More →
+              </a>
+            </div>
+
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide bg-gray-200 rounded-2xl p-4 flex flex-col gap-3">
+
+            <div class="w-full h-40 sm:h-48 bg-amber-400 flex justify-center items-center rounded-xl">
+              Product img
+            </div>
+
+            <div class="flex justify-between items-center text-sm text-gray-600">
+              <span>By Admin</span>
+              <span>22 Aug 2024</span>
+              <button>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-2">Product Name</h4>
+              <a href="#" class="text-green-800 font-medium">
+                Read More →
+              </a>
+            </div>
+
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide bg-gray-200 rounded-2xl p-4 flex flex-col gap-3">
+
+            <div class="w-full h-40 sm:h-48 bg-amber-400 flex justify-center items-center rounded-xl">
+              Product img
+            </div>
+
+            <div class="flex justify-between items-center text-sm text-gray-600">
+              <span>By Admin</span>
+              <span>22 Aug 2024</span>
+              <button>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-2">Product Name</h4>
+              <a href="#" class="text-green-800 font-medium">
+                Read More →
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="bg-primary text-white px-6 py-12">
+
+      <div class="grid gap-8 
+                  grid-cols-1 
+                  sm:grid-cols-2 
+                  lg:grid-cols-3">
+
+        <!-- Brand -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Botanica</h2>
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+          </p>
+          <p class="flex items-center mb-2">
+            <i class="fa-solid fa-location-dot text-green-400 mr-2"></i>
+            PO Box 1622 Bamboo Sweet West
+          </p>
+          <p class="flex items-center">
+            <i class="fa-solid fa-envelope text-green-400 mr-2"></i>
+            example@example.com
+          </p>
+        </div>
+
+        <!-- Open Hours -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Open Hours</h2>
+          <p><b>Monday – Friday:</b> 8am – 8pm</p>
+          <p><b>Saturday:</b> 9am – 5pm</p>
+          <p><b>Sunday:</b> Closed</p>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Get More Reserved On</h2>
+          <div class="flex gap-4 text-xl">
+            <i class="fa-brands fa-facebook cursor-pointer"></i>
+            <i class="fa-brands fa-square-x-twitter cursor-pointer"></i>
+            <i class="fa-brands fa-pinterest cursor-pointer"></i>
+            <i class="fa-brands fa-tiktok cursor-pointer"></i>
+          </div>
+        </div>
+
+        <!-- Orders -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Orders & Returns</h2>
+          <p class="cursor-pointer hover:underline">Track Your Order</p>
+          <p class="cursor-pointer hover:underline">Return Policy</p>
+        </div>
+
+        <!-- Account -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">My Account</h2>
+          <p class="cursor-pointer hover:underline">Login</p>
+          <p class="cursor-pointer hover:underline">My Cart</p>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Newsletters</h2>
+          <p class="mb-4">
+            Subscribe to our newsletter and get 10% off your first purchase
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="px-4 py-2 rounded-2xl sm:rounded-r-none text-black w-full"
+            />
+            <button
+              class="bg-green-600 px-6 py-2 rounded-2xl sm:rounded-l-none">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </footer>
+
+
+  <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="swiper.js"></script>
+</body>
+
+</html>

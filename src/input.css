@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@layer utilities {
+  .clip-custom-left {
+        clip-path: url(#clipShapeLeft);
+      }
+  .clip-custom-right {
+        clip-path: url(#clipShapeRight);
+      }
+}
+
+@theme {
+    /* Core palette */
+    --color-primary: oklch(34% 0.06 134);      /* Dark Green */
+    --color-secondary: oklch(75% 0.12 100);    /* Light Green */
+    --color-background: oklch(100% 0 0);       /* White */
+    --color-highlight: oklch(93% 0.1 90);      /* Soft Yellow */
+    --color-muted: oklch(97% 0 0);             /* Light Gray */
+    --color-accent-orange: oklch(85% 0.17 77); /* Orange */
+    --color-accent-red: oklch(55% 0.12 40);    /* Red */
+    
+}
